@@ -57,7 +57,9 @@ if(choose == 1){
     listFunction()
     backFunction()
     }while(back != 'back')
+    // Remove element from list
 }else if(choose == 3){
+    do{
     limit = list.length
     do{
     console.log('\nLista: ')
@@ -68,6 +70,7 @@ if(choose == 1){
     remove = remove - 1;
     list.splice(remove, 1)
     backFunction()
+}while(back != 'back')
 }else if(choose == 4){
     console.log('Już niedługo');
     backFunction();
