@@ -1,5 +1,6 @@
 // variable
 const prompt = require('prompt-sync') ();
+const fs = require('fs');
 let list = [];
 let choose;
 let back;
@@ -71,12 +72,33 @@ if(choose == 1){
     list.splice(remove, 1)
     backFunction()
 }while(back != 'back')
+    // Saving file
 }else if(choose == 4){
-    console.log('Już niedługo');
+    do{
+    let name = prompt('Jak chcesz nazwać plik? (Wpisz bez rozszerzeń) ')
+    fs.writeFileSync(`./saves/${name}.txt`, `${list}`)
+    console.log(`Zapisano plik o nazwie ${name}.txt`)
     backFunction();
+}while(back != 'back')
+    // Import file
 }else if(choose == 5){
-    console.log('Już niedługo');
+    do{
+    let filess = fs.readdirSync('./saves');
+    number = 0
+    console.log('Z jakiego pliku chcesz wczytać liste? Podaj nazwę bez rozszerzeń: ');
+    for(let filessElements of filess){
+        number = number + 1
+        console.log(`${number}. ${filessElements}`)
+    }
+    file = prompt()
+    names = fs.readFileSync(`./saves/${file}.txt`, 'utf8');
+    names = names.toString().split(',')
+    for(let namesElements of names){
+        list.push(namesElements)
+    console.log(`Wczytano liste ${file}.txt`)
+    }
     backFunction();
+    }while(back != 'back')
 }
 
 }while(back == 'back');
