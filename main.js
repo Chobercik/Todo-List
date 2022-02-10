@@ -1,6 +1,6 @@
 // variable
 const prompt = require('prompt-sync') ();
-let list = ['elo', 'melo'];
+let list = [];
 let choose;
 let back;
 // Function needed to show multiple times list TODO
