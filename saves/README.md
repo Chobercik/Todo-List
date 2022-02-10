@@ -1,1 +1,0 @@
-After istalation u can delete this file
