@@ -3,7 +3,7 @@ const prompt = require('prompt-sync') ();
 let list = ['elo', 'melo'];
 let choose;
 let back;
-// Fuction needed to show multiple times list TODO
+// Function needed to show multiple times list TODO
 function listFunction(){
     let number = 0;
     for(let listElements of list){
