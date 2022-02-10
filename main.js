@@ -3,7 +3,7 @@ const prompt = require('prompt-sync') ();
 let list = [];
 let choose;
 let back;
-// Function needed to show multiple times list TODO
+// Fuction needed to show multiple times list TODO
 function listFunction(){
     let number = 0;
     for(let listElements of list){
@@ -13,7 +13,7 @@ function listFunction(){
     }
 }
 
-// Fuction needed to multiples times back
+// Function needed to multiples times back
 function backFunction(){
     back = prompt('Jeżeli chcesz wrócić do menu wyboru wpisz "back": ')
 }
@@ -27,7 +27,7 @@ do{
     
     do{
     
-    console.log('\nWybierz co chcesz zrobic:\n1. Wyświetlić liste TODO\n2. Dodać punkt na liste.\n3. Usunąć plik z listy. \n4. Zapisać listę. \n5. Wczytać listę.\n')
+    console.log('\nWybierz co chcesz zrobic:\n1. Wyświetlić liste TODO\n2. Dodać punkt na liste.\n3. Usunąć plik z listy. \n4. Zapisać listę. \n5. Wczytać listę.\nJeżeli chcesz wyłączyć program wpisz "end".\n')
     choose  = prompt('Wybierasz opcję: ')
     console.log(' ')
 }while(choose != 1 && choose != 2 && choose != 3 && choose != 4 && choose != 5 && choose != 'end');
